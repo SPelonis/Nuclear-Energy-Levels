@@ -1,2 +1,2 @@
 # Nuclear-Energy-Levels
-This code calculates the energy eigenvalues for any nucleus using a second orden Runge-Kutta. 
+This code calculates the energy eigenvalues for any nucleus using a second orden Runge-Kutta. The effective potential includes the Wood-Saxon potential for the strong nuclear interaction, the Coulomb potential and the Centrifugal potential, which is derived from the Schrodinger equation. The code is highly changed for any nucleus and you can include more terms for the potential such as the Spin-Orbit one.
