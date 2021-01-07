@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAXREP 100
+#define MAXREP 10
  
 double x_t[10000], y_t[10000], z_t[10000], E_t[10000], value[10000];    
     
@@ -172,10 +172,10 @@ double f(double x_i,double y_i,double z_i,double dt_i, double E_i, double l_i, d
 double g(double x_i,double y_i,double z_i,double dt_i, double E_i, double l_i, double R_i, double charge_i)
 {
 if(x_i>R_i){
-    return    ( 20.75*l_i*(l_i+1)/pow(x_i,2) + 1.44*(charge_i)/x_i - 43/(pow(2.72,(x_i - R_i)/0.6)+1) - Q)*y_i;
+    return    (2*938*A/pow(197,2))*( 20.75*l_i*(l_i+1)/pow(x_i,2) + 1.44*(charge_i)/x_i - 43/(pow(2.72,(x_i - R_i)/0.6)+1) - E_i)*y_i;
 }
 if(x_i<=R_i){
-    return    ( 20.75*l_i*(l_i+1)/pow(x_i,2) + (1.44/2)*( 3 - pow(x_i,2)/pow(R_i,2) )*(charge_i)/R_i - 43/(pow(2.72,(x_i - R_i)/0.6)+1) - Q)*y_i;
+    return    (2*938*A/pow(197,2))*( 20.75*l_i*(l_i+1)/pow(x_i,2) + (1.44/2)*( 3 - pow(x_i,2)/pow(R_i,2) )*(charge_i)/R_i - 43/(pow(2.72,(x_i - R_i)/0.6)+1) - E_i)*y_i;
 }
 }
 
